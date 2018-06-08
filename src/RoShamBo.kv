@@ -1,0 +1,253 @@
+#:kivy 1.0.9
+
+<PauseScreen>:
+	background: background
+		
+	RoShamBoBackground:
+		id: background
+		size: self.parent.size
+		center: self.center 
+
+
+	BoxLayout:
+		orientation : 'vertical'
+		Button:
+			background_color: .5,.5,.5,.9
+			background_normal: "white.png"
+			text: 'Continue'
+			on_press: root.manager.current = 'Game'
+		Button:
+			background_color: .5,.5,.5,.9
+			background_normal: "white.png"
+			on_press: root.manager.current = 'Main'
+			text: 'Main Menu'
+		Button:
+			background_color: .5,.5,.5,.9
+			background_normal: "white.png"
+			text: 'Exit'
+			on_press: app.stop()
+
+			
+<MainMenu>:
+	background: background
+		
+	RoShamBoBackground:
+		id: background
+		size: self.parent.size
+		center: self.center 
+
+	BoxLayout:
+		orientation : 'vertical'
+		Button:
+			background_color: .5,.5,.5,.9
+			background_normal: "white.png"
+			on_press: root.manager.current = 'Train'
+			text: 'Train'
+		Button:
+			background_color: .5,.5,.5,.9
+			background_normal: "white.png"
+			on_press: root.manager.current = 'Game'
+			text: 'Play'
+		Button:
+			background_color: .5,.5,.5,.9
+			background_normal: "white.png"
+			text: 'Exit'
+			on_press: app.stop()
+
+<TrainSelection>:
+	anchor_x: "center"
+	anchor_y: "center"
+	BoxLayout:
+		id:box
+		Button:
+			id:start
+			background_color: .5,.5,.5,.9
+			background_normal: "white.png"
+			size_hint_x : .3
+			size_hint_y : .25
+			text: "Start Training"
+			on_press: root.callbackTrain()
+		Button:
+			id:menu
+			size_hint_x : .3
+			size_hint_y : .25
+			background_color: .5,.5,.5,.9
+			background_normal: "white.png"
+			text: "Main Menu"
+			on_press: root.callbackMain()
+			
+	AnchorLayout:
+		anchor_x:"center"
+		anchor_y:"top"
+		id: up
+			
+			
+			
+		
+<SelectionMenu>:
+	anchor_x: "center"
+	anchor_y: "bottom"
+	BoxLayout:
+		orientation: 'horizontal'
+		id : selection
+		Button:
+			id: p1
+			text: "Pause"
+			background_color: 1,1,1,0
+			background_normal: "white.png"
+			on_press: root.callbackPause()
+			size_hint_x : .2
+			size_hint_y : .2
+			Image:
+				source : "Pause.png"
+				allow_stretch: True
+				center: self.parent.center
+		
+		
+		Button:
+			id: rock
+			text: "Rock"
+			background_color: 1,1,1,0
+			background_normal: "white.png"
+			background_down: "blue.png"
+			on_press: root.callbackRock()
+			size_hint_x : .2
+			size_hint_y : .2
+			Image:
+				source : "Rock.png"
+				allow_stretch: True
+				center: self.parent.center
+				
+		
+		Button:
+			id: paper
+			text: "Paper"
+			background_color: 1,1,1,0
+			background_normal: "white.png"
+			background_down: "blue.png"
+			on_press: root.callbackPaper()
+			size_hint_x : .2
+			size_hint_y : .2
+			Image:
+				source : "Paper.png"
+				allow_stretch: True
+				center: self.parent.center
+		
+		Button:
+			id: scissors
+			text: "Scissors"
+			background_color: 1,1,1,0
+			background_normal: "white.png"
+			background_down: "blue.png"
+			on_press: root.callbackScissors()
+			size_hint_x : .2
+			size_hint_y : .2
+			Image:
+				source : "Scissors.png"
+				allow_stretch: True
+				center: self.parent.center
+				
+		Button:
+			id: myo
+			text: "MyoInput"
+			background_color: 1,1,1,0
+			background_normal: "white.png"
+			on_press: root.callbackMyo()
+			size_hint_x : .2
+			size_hint_y : .2
+			Image:
+				source : "myo.png"
+				allow_stretch: True
+				center: self.parent.center
+		
+
+	AnchorLayout:
+		anchor_x: "center"
+		anchor_y: "center"
+		id: center
+		Button:
+			id: play
+			text: "PLAY"
+			background_color: .6,.6,.6,.5
+			on_press: root.callbackPlay()
+			size_hint_x : .2
+			size_hint_y : .2
+
+	AnchorLayout:
+		anchor_x: "center"
+		anchor_y: "top"
+		id: up
+			
+<RoShamBoBackground>:
+	canvas.before:	
+		Color:
+			rgb:1,1,1
+		Rectangle:
+			pos: 0 , 0
+			size: self.width, self.height
+		Rectangle:
+			pos: self.width / 2 - self.width / 6  , self.height / 2 - self.height / 6
+			size: self.width / 3, self.height / 3
+			source: "middle.jpg"
+		
+		Color:
+			rgb: 0.8,0.1,0.1
+		Rectangle:
+			pos: 0, 0
+			size: 20, self.height
+		Color:
+			rgb: 0.1,0.1,0.8	
+		Rectangle:
+			pos: self.width -20, 0
+			size: 20, self.height
+		
+<RoShamBoTrain>
+	trainSelection: trainmenu
+	background: background
+		
+	RoShamBoBackground:
+		id: background
+		size: self.parent.size
+		center: self.center 
+
+	TrainSelection:
+		id: trainmenu
+		size: self.parent.size
+			
+<RoShamBoGame>:
+	selectionMenu: selectionmenu
+	background: background
+		
+	RoShamBoBackground:
+		id: background
+		size: self.parent.size
+		center: self.center 
+
+	SelectionMenu:
+		id: selectionmenu
+		size: self.parent.size
+
+<LoginGrid>
+	background: background
+	
+	RoShamBoBackground:
+		id: background
+		size: self.parent.size
+		center: self.center 
+		
+	AnchorLayout:
+		anchor_x:'center'
+		anchor_y:'center'
+		BoxLayout:
+			orientation:'vertical'
+			Label:
+				text:"Who are you ?"
+				
+			TextInput:
+				text:"Your User here."
+				multiline:False
+				on_text:app.inputUser(args[1])
+			Button:
+				text:'login'
+				on_press: app.loginUser()
+				

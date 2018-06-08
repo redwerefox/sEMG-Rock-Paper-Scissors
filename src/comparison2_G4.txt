@@ -1,0 +1,1 @@
+[{'probabilities': array([0.00766755, 0.8972694 , 0.09506308], dtype=float32), 'logits': array([-2.5669894 ,  2.1953697 , -0.04944596], dtype=float32), 'class_ids': array([1], dtype=int64)}]

@@ -1,0 +1,607 @@
+('frame id:', 542160L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 542477L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 542525L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 542575L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 542619L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 542666L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 542725L)
+('detect fist ? ', True)
+
+
+
+
+
+#####
+
+
+('frame id:', 702398L)
+Finger Id:761
+('Pinches:', True, False, False, False, False)
+Finger Id:761
+('Pinches:', True, False, False, False, False)
+('detect fist ? ', False)
+Finger Id:761
+('Pinches:', True, False, False, False, False)
+('detect paper ? ', False)
+Finger Id:761
+('Pinches:', True, False, False, False, False)
+('detect scissors ? ', False)
+
+('frame id:', 702658L)
+Finger Id:781
+('Pinches:', True, True, True, False, False)
+Finger Id:781
+('Pinches:', True, True, True, False, False)
+('detect fist ? ', False)
+Finger Id:781
+('Pinches:', True, True, True, False, False)
+('detect paper ? ', False)
+Finger Id:781
+('Pinches:', True, True, True, False, False)
+('detect scissors ? ', True)
+
+('frame id:', 702705L)
+Finger Id:781
+('Pinches:', True, True, True, False, False)
+Finger Id:781
+('Pinches:', True, True, True, False, False)
+('detect fist ? ', False)
+Finger Id:781
+('Pinches:', True, True, True, False, False)
+('detect paper ? ', False)
+Finger Id:781
+('Pinches:', True, True, True, False, False)
+('detect scissors ? ', True)
+
+('frame id:', 702738L)
+Finger Id:781
+('Pinches:', True, True, True, False, False)
+Finger Id:781
+('Pinches:', True, True, True, False, False)
+('detect fist ? ', False)
+Finger Id:781
+('Pinches:', True, True, True, False, False)
+('detect paper ? ', False)
+Finger Id:781
+('Pinches:', True, True, True, False, False)
+('detect scissors ? ', True)
+
+('frame id:', 702767L)
+Finger Id:781
+('Pinches:', False, True, True, False, False)
+Finger Id:781
+('Pinches:', False, True, True, False, False)
+('detect fist ? ', False)
+Finger Id:781
+('Pinches:', False, True, True, False, False)
+('detect paper ? ', False)
+Finger Id:781
+('Pinches:', False, True, True, False, False)
+('detect scissors ? ', True)
+
+('frame id:', 702798L)
+Finger Id:781
+('Pinches:', False, True, True, False, False)
+Finger Id:781
+('Pinches:', False, True, True, False, False)
+('detect fist ? ', False)
+Finger Id:781
+('Pinches:', False, True, True, False, False)
+('detect paper ? ', False)
+Finger Id:781
+('Pinches:', False, True, True, False, False)
+('detect scissors ? ', True)
+
+('frame id:', 702822L)
+Finger Id:781
+('Pinches:', False, True, True, False, False)
+Finger Id:781
+('Pinches:', False, True, True, False, False)
+('detect fist ? ', False)
+Finger Id:781
+('Pinches:', False, True, True, False, False)
+('detect paper ? ', False)
+Finger Id:781
+('Pinches:', False, True, True, False, False)
+('detect scissors ? ', True)
+
+('frame id:', 702847L)
+Finger Id:791
+('Pinches:', False, True, True, False, False)
+Finger Id:791
+('Pinches:', False, True, True, False, False)
+('detect fist ? ', False)
+Finger Id:791
+('Pinches:', False, True, True, False, False)
+('detect paper ? ', False)
+Finger Id:791
+('Pinches:', False, True, True, False, False)
+('detect scissors ? ', True)
+
+('frame id:', 702896L)
+Finger Id:791
+('Pinches:', False, False, False, False, False)
+Finger Id:791
+('Pinches:', False, False, False, False, False)
+('detect fist ? ', True)
+Finger Id:791
+('Pinches:', False, False, False, False, False)
+('detect paper ? ', False)
+Finger Id:791
+('Pinches:', False, False, False, False, False)
+('detect scissors ? ', False)
+
+('frame id:', 702944L)
+Finger Id:791
+('Pinches:', False, False, False, False, False)
+Finger Id:791
+('Pinches:', False, False, False, False, False)
+('detect fist ? ', True)
+Finger Id:791
+('Pinches:', False, False, False, False, False)
+('detect paper ? ', False)
+Finger Id:791
+('Pinches:', False, False, False, False, False)
+('detect scissors ? ', False)
+
+('frame id:', 702975L)
+Finger Id:791
+('Pinches:', False, False, False, False, False)
+Finger Id:791
+('Pinches:', False, False, False, False, False)
+('detect fist ? ', True)
+Finger Id:791
+('Pinches:', False, False, False, False, False)
+('detect paper ? ', False)
+Finger Id:791
+('Pinches:', False, False, False, False, False)
+('detect scissors ? ', False)
+
+('frame id:', 703027L)
+Finger Id:791
+('Pinches:', False, False, False, False, False)
+Finger Id:791
+('Pinches:', False, False, False, False, False)
+('detect fist ? ', True)
+Finger Id:791
+('Pinches:', False, False, False, False, False)
+('detect paper ? ', False)
+Finger Id:791
+('Pinches:', False, False, False, False, False)
+('detect scissors ? ', False)
+
+('frame id:', 703066L)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect fist ? ', False)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect paper ? ', True)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect scissors ? ', False)
+
+('frame id:', 703224L)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect fist ? ', False)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect paper ? ', True)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect scissors ? ', False)
+
+('frame id:', 703254L)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect fist ? ', False)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect paper ? ', True)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect scissors ? ', False)
+
+('frame id:', 703307L)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect fist ? ', False)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect paper ? ', True)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect scissors ? ', False)
+
+('frame id:', 703336L)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect fist ? ', False)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect paper ? ', True)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect scissors ? ', False)
+
+('frame id:', 703371L)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect fist ? ', False)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect paper ? ', True)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect scissors ? ', False)
+
+('frame id:', 703396L)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect fist ? ', False)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect paper ? ', True)
+Finger Id:791
+('Pinches:', True, True, True, True, True)
+('detect scissors ? ', False)
+
+('frame id:', 703424L)
+Finger Id:791
+('Pinches:', True, True, True, False, False)
+Finger Id:791
+('Pinches:', True, True, True, False, False)
+('detect fist ? ', False)
+Finger Id:791
+('Pinches:', True, True, True, False, False)
+('detect paper ? ', False)
+Finger Id:791
+('Pinches:', True, True, True, False, False)
+('detect scissors ? ', True)
+
+('frame id:', 703460L)
+Finger Id:791
+('Pinches:', True, True, True, False, False)
+Finger Id:791
+('Pinches:', True, True, True, False, False)
+('detect fist ? ', False)
+Finger Id:791
+('Pinches:', True, True, True, False, False)
+('detect paper ? ', False)
+Finger Id:791
+('Pinches:', True, True, True, False, False)
+('detect scissors ? ', True)
+
+('frame id:', 703489L)
+Finger Id:791
+('Pinches:', True, True, True, False, False)
+Finger Id:791
+('Pinches:', True, True, True, False, False)
+('detect fist ? ', False)
+Finger Id:791
+('Pinches:', True, True, True, False, False)
+('detect paper ? ', False)
+Finger Id:791
+('Pinches:', True, True, True, False, False)
+('detect scissors ? ', True)
+
+('frame id:', 703516L)
+Finger Id:791
+('Pinches:', True, True, True, False, False)
+Finger Id:791
+('Pinches:', True, True, True, False, False)
+('detect fist ? ', False)
+Finger Id:791
+('Pinches:', True, True, True, False, False)
+('detect paper ? ', False)
+Finger Id:791
+('Pinches:', True, True, True, False, False)
+('detect scissors ? ', True)
+c('frame id:',
+(C:\Users\Lukas\Anaconda2) D:\bachelor\sEMG-Trainer\src>python LeapListener.py
+('detect paper ? ', False)
+
+('frame id:', 542776L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 542824L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 542869L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 542916L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 542988L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 543242L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 543291L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 543334L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 543379L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 543422L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 543468L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 543506L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 543550L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 543592L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 543628L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 543677L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 543723L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 543766L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 543807L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 543843L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 543879L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 543981L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 544027L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 544066L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 544142L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 544184L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 544227L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 544266L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 544308L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 544353L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 544400L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 544452L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 544482L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 544531L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 544574L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 544614L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 544661L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 544703L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 544744L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 544783L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 544821L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 544857L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 544897L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 544935L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 544986L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 545045L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 545103L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 545137L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 545184L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 545224L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 545264L)
+('detect fist ? ', False)
+('detect paper ? ', False)
+
+('frame id:', 545304L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 545347L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 545385L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 545423L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 545466L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 545506L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 545543L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 545578L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 545611L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 545651L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 545689L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 545727L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 545766L)
+('detect fist ? ', False)
+('detect paper ? ', True)
+
+('frame id:', 545827L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 545908L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 545938L)
+('detect fist ? ', True)
+('detect paper ? ', False)
+
+('frame id:', 545970L)
+('detect fist ? ', True)
+('detect paper ? ', False)
