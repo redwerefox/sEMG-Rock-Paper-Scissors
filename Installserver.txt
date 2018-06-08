@@ -1,0 +1,7 @@
+conda create -n <tensorflow/serverenv> pip python=3.5 
++activate <tensorflow/serverenv>
++pip install --ignore-installed --upgrade tensorflow
++
++pip install Flask
++set FLASK_APP=TensorFlask.py
++flask run 
