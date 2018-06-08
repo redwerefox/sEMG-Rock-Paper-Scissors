@@ -29,6 +29,7 @@ class Config:
 			self.map.update({"Wins":0})
 			self.map.update({"Draws":0})
 			self.map.update({"Losses":0})
+			self.map.update({"Accuracy":0.0})
 		else : 
 			for line in configFile:
 				self.map = ast.literal_eval(line)

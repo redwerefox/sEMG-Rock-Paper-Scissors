@@ -73,8 +73,17 @@
 			size_hint_y : .25
 			background_color: .5,.5,.5,.9
 			background_normal: "white.png"
-			text: "Main Menu"
+			text: "End Trainingsession"
 			on_press: root.callbackMain()
+		Button:
+			id:update
+			size_hint_x : .3
+			size_hint_y : .25
+			background_color: .5,.5,.5,.9
+			background_normal: "white.png"
+			text: "End Trainingsession & Train Network"
+			on_press: root.callbackMainAndUpdateModel()
+			
 			
 	AnchorLayout:
 		anchor_x:"center"
@@ -244,10 +253,27 @@
 				text:"Who are you ?"
 				
 			TextInput:
-				text:"Your User here."
+				text:"Who are you ?."
 				multiline:False
 				on_text:app.inputUser(args[1])
 			Button:
 				text:'login'
 				on_press: app.loginUser()
-				
+
+<ModelInfo>
+	background: background
+	
+	RoShamBoBackground:
+		id: background
+		size: self.parent.size
+		center: self.center
+		
+	AnchorLayout:
+		anchor_x:'center'
+		anchor_y:'center'
+		BoxLayout:
+			orientation:'vertical'
+			Button:
+				id: loading
+				text:"startUpdate"
+				on_press: root.startModelUpdate()

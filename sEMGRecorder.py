@@ -23,8 +23,8 @@ from MyoPoller import *
 class sEMGRecorder():
 	
 	### Connect devices
-	def __init__ (self):
-		myo = MyoPoller()
+	def __init__ (self, myo):
+		myo = myo
 		leap = LeapListener()
 		
 		self.myoListener = myo
@@ -40,13 +40,13 @@ class sEMGRecorder():
 	
 	
 		self.leapListener.startListening()
-		self.myoListener.startListening()
+		#self.myoListener.startListening()
 		self.startThread()
 
 		
 	def stopRecording(self):
 		self.leapListener.stopListening()
-		self.myoListener.stopListening()
+		#self.myoListener.stopListening()
 		self.stopThread()
 		self.file.close()
 	

@@ -9,6 +9,8 @@ from myo import init, Hub, Feed, StreamEmg
 ###                     Requires MyoConnect to run !                         ###
 ################################################################################
 
+DIM = 24
+
 class MyoPoller ():
 	def __init__(self):
 		self.ready = False
@@ -41,15 +43,15 @@ class MyoPoller ():
 				print("No Myo connected after 2 seconds")
 			print("Hello, Myo!")
 			myo.set_stream_emg(StreamEmg.enabled)
-			self.emg8x8 = []
+			self.emgDIMx8 = []
 			while hub.running and myo.connected and not self.thread_stop.is_set():
 				quat = myo.orientation
 				if self.emg != myo.emg:
 					self.emg = myo.emg
-					self.emg8x8.append(self.emg)
+					self.emgDIMx8.append(self.emg)
 				###8 elements in feed , keep the last 8 and be ready iff
-				if len(self.emg8x8) == 9:
-					self.emg8x8.pop(0)
+				if len(self.emgDIMx8) == DIM + 1:
+					self.emgDIMx8.pop(0)
 					self.ready = True
 					
 				#print('Orientation:', quat.x, quat.y, quat.z, quat.w)

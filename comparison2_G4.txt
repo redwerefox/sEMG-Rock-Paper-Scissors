@@ -1,0 +1,7 @@
+[{'probabilities': array([0.00484599, 0.46574402, 0.5294099 ], dtype=float32), 'class_ids': array([2], dtype=int64), 'logits': array([-2.794708 ,  1.770776 ,  1.8989028], dtype=float32)}]
+[{'probabilities': array([9.268991e-01, 7.280338e-02, 2.975687e-04], dtype=float32), 'class_ids': array([0], dtype=int64), 'logits': array([ 3.8871882,  1.3431058, -4.1567664], dtype=float32)}]
+[{'probabilities': array([0.01321275, 0.85465723, 0.13213006], dtype=float32), 'class_ids': array([1], dtype=int64), 'logits': array([-1.8423332 ,  2.3271852 ,  0.46027142], dtype=float32)}]
+[{'probabilities': array([6.5863132e-04, 2.9306555e-01, 7.0627582e-01], dtype=float32), 'class_ids': array([2], dtype=int64), 'logits': array([-4.057247 ,  2.0407405,  2.92035  ], dtype=float32)}]
+[{'probabilities': array([0.038125  , 0.909396  , 0.05247904], dtype=float32), 'class_ids': array([1], dtype=int64), 'logits': array([-0.8319415,  2.3399687, -0.512398 ], dtype=float32)}]
+[{'probabilities': array([0.06300864, 0.87663585, 0.06035555], dtype=float32), 'class_ids': array([1], dtype=int64), 'logits': array([-0.5324045,  2.1004155, -0.5754233], dtype=float32)}]
+[{'probabilities': array([0.00084391, 0.33812782, 0.6610282 ], dtype=float32), 'class_ids': array([2], dtype=int64), 'logits': array([-3.9206028,  2.07253  ,  2.7429025], dtype=float32)}]
