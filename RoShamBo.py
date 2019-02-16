@@ -195,6 +195,7 @@ class SelectionMenu(AnchorLayout):
 class TrainSelection (AnchorLayout):
 	
 	def callbackTrain (self):
+		self.trainLoop = None
 		if not MYO_CONNECTED:
 			print("myo not ready")
 			return
@@ -207,9 +208,12 @@ class TrainSelection (AnchorLayout):
 			self.recorder = app.recorder
 			self.recorder.startRecording(app.dataset_dir+filename)
 		
+		self.startbutton = self.ids["start"]
+		self.menubutton = self.ids["menu"]
+		
 		#alter buttons
-		self.ids["box"].remove_widget(self.ids["start"])
-		self.ids["box"].remove_widget(self.ids["menu"])
+		self.ids["box"].remove_widget(self.startbutton)
+		self.ids["box"].remove_widget(self.menubutton)
 		self.stopbtn = Button(text='Stop Training', size_hint_x=0.3, size_hint_y=0.25)
 		self.stopbtn.bind(on_press=self.callbackTrain_stop)
 		self.ids["box"].add_widget(self.stopbtn)
@@ -222,8 +226,8 @@ class TrainSelection (AnchorLayout):
 			self.recorder.stopRecording()
 			app = App.get_running_app()
 			app.config.map["countDatasets"]  = self.num_dataset
-		self.ids["box"].add_widget(self.ids["start"])
-		self.ids["box"].add_widget(self.ids["menu"])
+		self.ids["box"].add_widget(self.startbutton)
+		self.ids["box"].add_widget(self.menubutton)
 		self.ids["box"].remove_widget(self.stopbtn)
 		self.ids["up"].remove_widget(self.cpu)
 		
@@ -244,9 +248,11 @@ class TrainSelection (AnchorLayout):
 		self.cpu.size_hint_y = 0.3
 		self.cpu.allow_stretch = True
 		self.cpu.opacity = 0.9
+		self.ids["up"].clear_widgets()
 		self.ids["up"].add_widget(self.cpu)
-				
-
+		
+		if self.trainLoop:
+			Clock.unschedule(self.trainUpdate, 2.5)
 		self.trainLoop = Clock.schedule_interval(self.trainUpdate, 2.5)
 			
 	def trainUpdate (self, dt):		
@@ -254,7 +260,6 @@ class TrainSelection (AnchorLayout):
 		player = Gesture(gesture_idx)
 		if player.beats(self.enemy) == "WIN" :
 			print("nice !")
-			self.ids["up"].remove_widget(self.cpu)
 			Clock.unschedule(self.trainLoop)
 			Clock.schedule_once(self.beginTrain)
 		
@@ -263,6 +268,7 @@ class TrainSelection (AnchorLayout):
 		data_dir = app.user_dir + "/datasets"
 		dataUtils = DataUtils(data_dir)
 		dataUtils.mergeFiles()	# creates datasets for NN training
+		self.ids["up"].clear_widgets()
 		sm.current = "Main"
 	
 	def callbackMainAndUpdateModel(self):
