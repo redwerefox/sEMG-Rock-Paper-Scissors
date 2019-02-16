@@ -1,0 +1,14 @@
+### windows 10 ###
+ 
+prerequisits:
+
+-anaconda
+-- tested: anaconda3 v5.2.0 for python 3.6
+-- no global path entry needed
+
+- leapmotion orion beta / SDK v3.2.1
+
+
+notes:
+
+- 15000 data points / lines for training are usually enough to play

@@ -28,7 +28,7 @@ TENSOR_CONNECTED = True
 LEAP_CONNECTED = True
 MYO_CONNECTED = True
 select = InstructionGroup() # holds sets of canvas drawings
-globals = {"myoInput":False,"playbutton":None,"responce":None,"lastTrain":0}
+globals = {"myoInput":False,"playbutton":None,"gameText":None,"tooltip":None  ,"responce":None,"lastTrain":0}
 
 if MYO_CONNECTED:
 	myo = MyoPoller()
@@ -100,27 +100,31 @@ class SelectionMenu(AnchorLayout):
 		self.ids["center"].remove_widget(globals["playbutton"])
 		
 		#Schedule RoShamBo sequence
-		Clock.schedule_once(self.callbackRo)
-		Clock.schedule_once(self.callbackSham,1)
-		Clock.schedule_once(self.callbackBo,2)
-		Clock.schedule_once(self.callbackEval,2.33)
+		self.ro_schedule = Clock.schedule_once(self.callbackRo)
+		self.sham_schedule = Clock.schedule_once(self.callbackSham,1)
+		self.bo_schedule = Clock.schedule_once(self.callbackBo,2)
+		self.eval_schedule = Clock.schedule_once(self.callbackEval,2.33)
+	
+	def callbackPlayAgain(self,dt):
+		self.ids["center"].remove_widget(globals["gameText"])
+		self.callbackPlay()
 	
 	# Schedule Callbacks
 	def callbackRo(self,dt):
-		self.gameText = Button(text="Ro",disable=True,size_hint_x=0.2,size_hint_y=0.2)
-		self.ids["center"].add_widget(self.gameText)
+		globals["gameText"] = Button(text="Ro",disable=True,size_hint_x=0.2,size_hint_y=0.2)
+		self.ids["center"].add_widget(globals["gameText"])
 		print("Ro")
 	
 	def callbackSham(self,dt):
-		self.gameText.text = "Sham"
+		globals["gameText"].text = "Sham"
 		print("Sham")
 	
 	def callbackBo(self,dt):
-		self.gameText.text = "Bo"
+		globals["gameText"].text = "Bo"
 		print("Bo")
 	
 	def callbackEval(self,dt):
-		self.ids["center"].remove_widget(self.gameText)
+		self.ids["center"].remove_widget(globals["gameText"])
 		
 		# evaluate Game
 		enemy = Gesture(randint(0,2))
@@ -169,9 +173,21 @@ class SelectionMenu(AnchorLayout):
 		
 		#Clock.schedule_once(self.callbackResult)
 		Clock.schedule_once(self.callbackClearScreen,3)
+		Clock.schedule_once(self.callbackNextGame,3)
 	
-	def callbackResult(self, dt):
-		pass
+	def callbackNextGame(self,dt):
+		globals["gameText"].text = "Next Game in 5"
+		self.ids["center"].add_widget(globals["gameText"])
+
+		#countdown to next game
+		Clock.schedule_once(self.callbackPlayAgain, 5)
+		Clock.schedule_once(lambda dt: callbackInX(self, 4, 1), 4)
+		Clock.schedule_once(lambda dt: callbackInX(self, 3, 2), 3)
+		Clock.schedule_once(lambda dt: callbackInX(self, 2, 3), 2)
+		Clock.schedule_once(lambda dt: callbackInX(self, 1, 4), 1)
+
+		def callbackInX(self,dt,x):
+			globals["gameText"].text = "Next Game in " + str(x)
 
 	def callbackClearScreen(self,dt):
 		
@@ -183,12 +199,23 @@ class SelectionMenu(AnchorLayout):
 		
 		if self.img:
 			self.ids["center"].remove_widget(self.img)
-		self.ids["center"].add_widget(globals["playbutton"])
+		#self.ids["center"].add_widget(globals["playbutton"])
 		self.ids["up"].remove_widget(self.cpu)
 		
 	def callbackPause(self):
 		sm.current = 'Pause'
-
+		#unschedule current game
+		Clock.unschedule(self.callbackRo)
+		Clock.unschedule(self.callbackSham)
+		Clock.unschedule(self.callbackBo)
+		Clock.unschedule(self.callbackEval)
+		Clock.unschedule(self.callbackNextGame)
+		Clock.unschedule(self.callbackPlayAgain)
+		if globals["gameText"]:
+			self.ids["center"].remove_widget(globals["gameText"])
+		if globals["playbutton"]:
+			self.ids["center"].add_widget(globals["playbutton"])
+		
 ########## Train ##########################################################
 	# Freestyle and adaptive train
 	# connects to Myo + leapmotion (requires python 2.7) installed myo-python
@@ -230,6 +257,10 @@ class TrainSelection (AnchorLayout):
 		self.ids["box"].add_widget(self.menubutton)
 		self.ids["box"].remove_widget(self.stopbtn)
 		self.ids["up"].remove_widget(self.cpu)
+		self.ids["center"].clear_widgets()
+		
+		Clock.unschedule(self.trainUpdate)
+		Clock.unschedule(self.trainHold)
 		
 		
 	def beginTrain(self, dt):
@@ -243,6 +274,16 @@ class TrainSelection (AnchorLayout):
 		self.enemy = Gesture(nextGesture)
 		globals["lastTrain"] = nextGesture
 		
+		#tooltip
+		globals["tooltip"] = Button(text="Beat him")
+		globals["tooltip"].color = [0,0,0,1]
+		globals["tooltip"].size_hint_x = 0.2
+		globals["tooltip"].size_hint_y = 0.2
+		globals["tooltip"].disable=True
+		globals["tooltip"].background_normal = "white.png"
+		self.ids["center"].add_widget(globals["tooltip"])
+		
+		
 		self.cpu = Image(source=self.enemy.getCPUGestureImage())
 		self.cpu.size_hint_x = 0.3
 		self.cpu.size_hint_y = 0.3
@@ -252,8 +293,9 @@ class TrainSelection (AnchorLayout):
 		self.ids["up"].add_widget(self.cpu)
 		
 		if self.trainLoop:
-			Clock.unschedule(self.trainUpdate, 2.5)
+			Clock.unschedule(self.trainUpdate)
 		self.trainLoop = Clock.schedule_interval(self.trainUpdate, 2.5)
+		self.trainDisplay = Clock.schedule_interval(self.trainHold, 0.1)
 			
 	def trainUpdate (self, dt):		
 		gesture_idx = self.recorder.gesture -1 #-1 to shift away defaults
@@ -262,7 +304,22 @@ class TrainSelection (AnchorLayout):
 			print("nice !")
 			Clock.unschedule(self.trainLoop)
 			Clock.schedule_once(self.beginTrain)
-		
+			Clock.unschedule(self.trainDisplay)
+			
+	def trainHold(self,dt):
+		gesture_idx = self.recorder.gesture -1 #-1 to shift away defaults
+		player = Gesture(gesture_idx)
+		if player.beats(self.enemy) == "WIN" :
+			globals["tooltip"].text = "Hold it !"
+			globals["tooltip"].color = [0.1,0.5,0.2,1]
+			self.ids["center"].clear_widgets()
+			self.ids["center"].add_widget(globals["tooltip"])
+		else:
+			globals["tooltip"].text="Beat him"
+			globals["tooltip"].color = [0,0,0,1]
+			self.ids["center"].clear_widgets()
+			self.ids["center"].add_widget(globals["tooltip"])
+			
 	def callbackMain(self):
 		app = App.get_running_app()
 		data_dir = app.user_dir + "/datasets"

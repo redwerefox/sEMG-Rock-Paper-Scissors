@@ -91,7 +91,10 @@
 		id: up
 			
 			
-			
+	AnchorLayout:
+		anchor_x:"center"
+		anchor_y:"center"
+		id: center		
 		
 <SelectionMenu>:
 	anchor_x: "center"
@@ -194,11 +197,6 @@
 		Rectangle:
 			pos: 0 , 0
 			size: self.width, self.height
-		Rectangle:
-			pos: self.width / 2 - self.width / 6  , self.height / 2 - self.height / 6
-			size: self.width / 3, self.height / 3
-			source: "middle.jpg"
-		
 		Color:
 			rgb: 0.8,0.1,0.1
 		Rectangle:
